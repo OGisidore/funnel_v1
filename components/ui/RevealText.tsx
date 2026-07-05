@@ -16,7 +16,8 @@ export default function RevealText({
   const words = text.split(" ");
 
   return (
-    <span className={`inline ${className}`} aria-label={text}>
+    <span className={`inline ${className}`}>
+      <span className="sr-only">{text}</span>
       {words.map((word, i) => (
         <span
           key={i}

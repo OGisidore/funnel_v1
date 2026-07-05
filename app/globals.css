@@ -14,9 +14,6 @@
   --color-accent: var(--brand-accent);
   --font-sans: var(--font-geist-sans);
   --font-display: var(--font-cormorant);
-
-  --animate-fade-up: fade-up 0.7s ease forwards;
-  --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
 }
 
 @keyframes fade-up {

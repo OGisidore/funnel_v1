@@ -1,44 +1,59 @@
+import { DictShape } from "@/app/i18n/dictionaries/fr";
+import { StarsBackground } from "@/components/reusable/background/star";
 import RevealText from "@/components/ui/RevealText";
-import ScrollIndicator from "@/components/ui/ScrollIndicator";
-import { stage1Content } from "@/lib/mock-data";
 
-export default function StageArrivee() {
-  const { headline, subline } = stage1Content;
+interface StageArriveeProps {
+  dict: DictShape;
+}
 
-  // Durée estimée de l'animation headline (nb_mots × 100ms + 300ms base)
-  const wordCount = headline.split(" ").length;
-  const sublineDelay = 300 + wordCount * 100 + 400;
+export default function StageArrivee({ dict }: StageArriveeProps) {
+  const { title, subtitle, question, roles } = dict.hero;
+
+  // Words to highlight based on language (supports both EN and FR)
+  const highlightWords = ["perçoit-elle", "votre", "expertise", "perceive", "your"];
 
   return (
     <section
       id="stage-arrivee"
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 bg-paper"
+      className="relative min-h-[80vh] flex flex-col items-center justify-center px-6 overflow-hidden"
       aria-label="Arrivée"
     >
-      {/* Zone de contenu centré — max 640px pour respirer */}
-      <div className="max-w-[640px] w-full flex flex-col items-center text-center gap-8">
-        {/* Headline — police éditoriale, fine, grande */}
-        <h1 className="font-display font-light text-[2.6rem] leading-[1.2] tracking-[-0.01em] text-ink sm:text-[3.25rem]">
+      <StarsBackground className="absolute inset-0 z-0" />
+
+      <div className="max-w-8xl w-full h-[80vh] flex flex-col  justify-center text-center gap-12 relative z-10">
+
+        {/* Header / Top Left */}
+        <div className="absolute top-8 left-6 sm:left-12 flex flex-col items-start gap-1 z-20">
+          <div className="text-brand font-medium tracking-widest uppercase text-sm sm:text-base">
+            {title}
+          </div>
+          <div className="text-muted-foreground font-light tracking-[0.15em] uppercase text-xs sm:text-sm">
+            {subtitle}
+          </div>
+        </div>
+        <div className="max-w-5xl mx-auto space-y-10">
+          {/* Hook */}
+          <h1 className="font-display! font-light! text-[2.5rem]! leading-[1.2]! tracking-[-0.02em]! sm:text-[4rem]!">
           <RevealText
-            text={headline}
+              text={question}
             baseDelay={300}
             wordDelay={100}
+              highlightWords={highlightWords}
+              highlightClassName="text-brand font-medium"
           />
-        </h1>
+          </h1>        
 
-        {/* Subline — Geist, muted, taille modérée */}
-        <p className="font-sans text-lg leading-relaxed text-muted max-w-sm">
-          <RevealText
-            text={subline}
-            baseDelay={sublineDelay}
-            wordDelay={70}
-          />
-        </p>
-      </div>
+          {/* Roles */}
+          <div className="flex flex-wrap justify-center gap-6 text-muted-foreground font-light text-lg sm:text-xl mt-4">
+            <RevealText
+              text={roles.join("  •  ")}
+              baseDelay={1000}
+              wordDelay={100}
+            />
+          </div>
+        </div>
 
-      {/* Scroll indicator — ancré en bas de la section */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
-        <ScrollIndicator delay={3500} />
+
       </div>
     </section>
   );

@@ -21,8 +21,8 @@ export default function ScrollIndicator({ delay = 2000 }: ScrollIndicatorProps) 
       className="flex flex-col items-center gap-3 animate-[fade-up_0.8s_ease_forwards]"
       aria-hidden="true"
     >
-      <div className="w-px h-8 bg-muted/40" />
-      <div className="w-1.5 h-1.5 rounded-full bg-muted animate-[pulse-dot_2s_ease-in-out_infinite]" />
+      <div className="w-px h-8 bg-white" />
+      <div className="w-1.5 h-1.5 rounded-full bg-white animate-[pulse-dot_2s_ease-in-out_infinite]" />
     </div>
   );
 }

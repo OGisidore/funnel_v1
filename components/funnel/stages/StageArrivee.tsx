@@ -33,18 +33,18 @@ export default function StageArrivee({ dict }: StageArriveeProps) {
         </div>
         <div className="max-w-5xl mx-auto space-y-10">
           {/* Hook */}
-          <h1 className="font-display! font-light! text-[2.5rem]! leading-[1.2]! tracking-[-0.02em]! sm:text-[4rem]!">
+          <h1 className="font-display! font-light! text-[30px]! leading-[1.2]! tracking-[-0.02em]! sm:text-[5rem]!">
           <RevealText
               text={question}
             baseDelay={300}
             wordDelay={100}
               highlightWords={highlightWords}
-              highlightClassName="text-brand font-medium"
+              highlightClassName="text-brand text-[5re]! font-medium"
           />
           </h1>        
 
           {/* Roles */}
-          <div className="flex flex-wrap justify-center gap-6 text-muted-foreground font-light text-lg sm:text-xl mt-4">
+          <div className="flex flex-wrap justify-center gap-6 text-white font-light text-lg sm:text-4xl mt-4">
             <RevealText
               text={roles.join("  •  ")}
               baseDelay={1000}

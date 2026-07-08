@@ -9,7 +9,7 @@ export const dict: DictShape = {
     title: "ISIDORE AI",
     subtitle: "Executive Readiness™",
     question: "Does your audience perceive your expertise at its true value?",
-    roles: ["CEO.", "Entrepreneur.", "Consultant.", "Coach."],
+    roles: ["CEO ", "Entrepreneur ", "Consultant ", "Coach "],
   },
   vsl: {
     footer: "Discover the invisible gaps in your executive communication and learn how to turn them into assets.",
@@ -28,7 +28,7 @@ export const dict: DictShape = {
     text3: "Very few prepare themselves.",
   },
   transformation: {
-    title: "Transform the way people experience your expertise in just 7 days.",
+    title: "Transform the way people experience your expertise in just 7 days",
     points: [
       "Without months of training.",
       "Without expensive coaching.",

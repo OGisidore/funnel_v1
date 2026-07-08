@@ -9,7 +9,7 @@ export const dict = {
     title: "ISIDORE AI",
     subtitle: "Executive Readiness™",
     question: "Votre audience perçoit-elle votre expertise à sa juste valeur ?",
-    roles: ["CEO.", "Entrepreneur.", "Consultant.", "Coach."],
+    roles: ["CEO ", "Entrepreneur ", "Consultant ", "Coach "],
   },
   vsl: {
     footer: "Découvrez les lacunes invisibles de votre communication exécutive et apprenez à les transformer en atouts.",
@@ -23,16 +23,16 @@ export const dict = {
     ],
   },
   communicationAsset: {
-    text1: "Votre communication est l'un de vos plus grands atouts commerciaux.",
-    text2: "Chaque leader prépare la réunion.",
-    text3: "Très peu se préparent eux-mêmes.",
+    text1: "Votre communication est l'un de vos plus grands atouts commerciaux",
+    text2: "Chaque leader prépare la réunion",
+    text3: "Très peu se préparent eux-mêmes",
   },
   transformation: {
     title: "Transformez la façon dont les gens perçoivent votre expertise en seulement 7 jours.",
     points: [
-      "Sans des mois de formation.",
-      "Sans coaching coûteux.",
-      "Sans des années d'essais et d'erreurs."
+      "Sans des mois de formation",
+      "Sans coaching coûteux",
+      "Sans des années d'essais et d'erreurs"
     ]
   },
   ctas: {
@@ -44,14 +44,14 @@ export const dict = {
     reserveMasterclass: "Réserver Ma Masterclass en Communication Exécutive™",
   },
   decisionStart: {
-    title: "Chaque décision commerciale importante commence par une conversation.",
+    title: "Chaque décision commerciale importante commence par une conversation",
     subtitle: "Chaque conversation façonne :",
     shapes: ["La Confiance", "L'Autorité", "L'Influence", "Les Décisions", "Les Opportunités Commerciales"]
   },
   worth: {
     title: "Votre audience décide de ce que vaut votre expertise...",
-    subtitle: "bien avant de la comprendre pleinement.",
-    makeSure: "Assurez-vous que votre audience perçoive votre expertise à sa juste valeur."
+    subtitle: "bien avant de la comprendre pleinement",
+    makeSure: "Assurez-vous que votre audience perçoive votre expertise à sa juste valeur"
   },
   preparingFor: {
     title: "Pour quoi vous préparez-vous ?",
